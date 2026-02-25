@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BdMSO 2025 - Bangladesh Mathematics & Science Olympiad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLFS8F7R1X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LLFS8F7R1X');
+    </script>
+
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Header -->
+    <header
+        class="bg-white/90 text-black font-bold shadow-md sticky top-0 z-50 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center relative">
+            <img src="bdmso_logo.png" class="w-24">
+            <!-- Hamburger for mobile -->
+            <button id="menu-toggle"
+                class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-blue-100 transition focus:outline-none"
+                aria-label="Open menu">
+                <span class="block w-6 h-0.5 bg-blue-700 mb-1"></span>
+                <span class="block w-6 h-0.5 bg-blue-700 mb-1"></span>
+                <span class="block w-6 h-0.5 bg-blue-700"></span>
+            </button>
+            <!-- Nav links (desktop) -->
+            <nav id="main-nav" class="hidden md:flex space-x-2 md:space-x-4 items-center">
+                <a href="bdmso.html"
+                    class="px-3 py-2 rounded-lg bg-blue-50 text-blue-700 transition font-semibold">Home</a>
+                <a href="results.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Results</a>
+                <a href="bdmso.html#about"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">About</a>
+                <a href="timeline.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Timeline</a>
+                <a href="syllabus.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Syllabus</a>
+                <a href="faq.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">FAQ</a>
+                <a href="contact.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Contact</a>
+            </nav>
+            <!-- Mobile menu dropdown -->
+            <div id="mobile-menu"
+                class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg rounded-b-xl py-4 px-6 space-y-2 hidden">
+                <a href="bdmso.html"
+                    class="block px-3 py-2 rounded-lg bg-blue-50 text-blue-700 transition font-semibold">Home</a>
+                <a href="results.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Results</a>
+                <a href="bdmso.html#about"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">About</a>
+                <a href="timeline.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Timeline</a>
+                <a href="syllabus.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Syllabus</a>
+                <a href="faq.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">FAQ</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Contact</a>
+            </div>
+        </div>
+    </header>
+    <script>
+        // Responsive menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // Optional: Close menu on link click (mobile)
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section
+        class="relative bg-gradient-to-br from-blue-300 via-blue-100 to-green-100 py-24 px-4 text-center shadow-lg rounded-b-3xl mb-8 overflow-hidden flex flex-col items-center justify-center">
+        <!-- Animated Science SVG Background -->
+        <div class="absolute inset-0 pointer-events-none z-0">
+            <svg width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="absolute top-0 left-0 w-full h-full opacity-30 animate-pulse">
+                <circle cx="200" cy="120" r="80" fill="#38bdf8" fill-opacity="0.2" />
+                <circle cx="1240" cy="200" r="100" fill="#22d3ee" fill-opacity="0.15" />
+                <ellipse cx="720" cy="180" rx="180" ry="60" fill="#4ade80" fill-opacity="0.13" />
+                <g class="animate-spin-slow" style="transform-origin: 720px 180px;">
+                    <ellipse cx="720" cy="180" rx="120" ry="40" stroke="#0ea5e9" stroke-width="2" fill="none" />
+                </g>
+            </svg>
+        </div>
+        <div class="relative z-10">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-blue-700 drop-shadow-lg tracking-tight">Bangladesh
+                Mathematics and Science Olympiad</h2>
+            <p class="text-xl md:text-xl mb-10 max-w-2xl mx-auto text-gray-700 font-medium">BdMSO serves as the official
+                qualifying round to select Bangladesh's primary school students for international representation.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="results.html"
+                    class="bg-yellow-500 text-black px-10 py-4 rounded-xl font-bold shadow hover:bg-yellow-400 transition text-lg flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 17v-2a4 4 0 018 0v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                    Result 2025
+                </a>
+                <a href="BdMSO_Sample_Question_2025.pdf" target="_blank"
+                    class="bg-gradient-to-r from-blue-500 to-green-300 text-black px-10 py-4 rounded-xl font-bold shadow-lg hover:from-blue-800 hover:to-green-500 transition text-lg flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6v12m0-12c-2.21 0-4 1.79-4 4v8c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V10c0-2.21-1.79-4-4-4zm0 0c2.21 0 4 1.79 4 4v8c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V10c0-2.21 1.79-4 4-4z" />
+                    </svg>
+                    Sample Questions
+                </a>
+                <a href="syllabus.html"
+                    class="bg-white border-2 border-blue-700 text-blue-700 px-10 py-4 rounded-xl font-bold shadow hover:bg-blue-50 transition text-lg flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6v12m0-12c-2.21 0-4 1.79-4 4v8c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V10c0-2.21-1.79-4-4-4zm0 0c2.21 0 4 1.79 4 4v8c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V10c0-2.21 1.79-4 4-4z" />
+                    </svg>
+                    View Syllabus
+                </a>
+            </div>
+        </div>
+        <!-- Science-themed floating icons -->
+        <div class="absolute left-8 top-8 z-10 animate-bounce-slow">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-400 opacity-70" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <circle cx="12" cy="12" r="2.5" fill="currentColor" />
+                <ellipse cx="12" cy="12" rx="8" ry="3.5" stroke="currentColor" stroke-width="1.5" fill="none" />
+                <ellipse cx="12" cy="12" rx="3.5" ry="8" stroke="currentColor" stroke-width="1.5" fill="none"
+                    transform="rotate(60 12 12)" />
+                <ellipse cx="12" cy="12" rx="3.5" ry="8" stroke="currentColor" stroke-width="1.5" fill="none"
+                    transform="rotate(-60 12 12)" />
+            </svg>
+        </div>
+        <div class="absolute right-8 bottom-8 z-10 animate-bounce-slow">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-400 opacity-70" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <rect x="4" y="5" width="16" height="14" rx="2" stroke="currentColor" stroke-width="2" fill="none" />
+                <circle cx="8" cy="9" r="1.5" fill="currentColor" />
+                <circle cx="12" cy="9" r="1.5" fill="currentColor" />
+                <circle cx="16" cy="9" r="1.5" fill="currentColor" />
+                <circle cx="8" cy="15" r="1.5" fill="currentColor" />
+                <circle cx="12" cy="15" r="1.5" fill="currentColor" />
+                <circle cx="16" cy="15" r="1.5" fill="currentColor" />
+                <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+        </div>
+        <style>
+            @keyframes bounce-slow {
+
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-20px);
+                }
+            }
+
+            .animate-bounce-slow {
+                animation: bounce-slow 3s infinite;
+            }
+
+            @keyframes spin-slow {
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .animate-spin-slow {
+                animation: spin-slow 12s linear infinite;
+            }
+        </style>
+    </section>
+
+    <section id="international-winners"
+        class="relative max-w-5xl mx-auto py-20 px-8 bg-white/90 rounded-2xl shadow-xl mb-16 flex flex-col items-center overflow-hidden">
+        <div class="w-full relative z-10">
+            <div class="w-full rounded-2xl overflow-hidden shadow-lg">
+                <img src="int_winner.jpg" alt="International Winners - IMSO 2025"
+                    class="w-full h-auto object-cover block" loading="lazy">
+            </div>
+
+            <h3 class="text-3xl md:text-4xl font-bold mx-6 my-10  text-center text-blue-800 tracking-tight drop-shadow">
+                Bangladesh Received 2 Silver and 10 Bronze in 22nd IMSO, Kedah, Malaysia with Every Participants with a
+                Medal!
+            </h3>
+
+
+            <!-- National team result table (from IMSO_Result_2025.csv) -->
+            <div class="w-full mt-6 overflow-x-auto rounded-2xl shadow-lg bg-white">
+                <table class="min-w-full text-sm align-middle">
+                    <thead class="bg-gradient-to-r from-blue-100 to-blue-200 sticky top-0 z-10">
+                        <tr>
+                            <th class="px-4 py-3 text-left font-bold text-blue-900">#</th>
+                            <th class="px-4 py-3 text-left font-bold text-blue-900">Name</th>
+                            <th class="px-4 py-3 text-left font-bold text-blue-900">School</th>
+                            <th class="px-4 py-3 text-left font-bold text-blue-900">Subject</th>
+                            <th class="px-4 py-3 text-left font-bold text-blue-900">Medal</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-blue-100">
+                        <!-- Mathematics — Silver -->
+                        <tr
+                            class="bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition transform hover:-translate-y-0.5 shadow-sm">
+                            <td class="px-4 py-2">1</td>
+                            <td class="px-4 py-2">Arijit Saha</td>
+                            <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+                            <td class="px-4 py-2">Mathematics</td>
+                            <td class="px-4 py-2">Silver</td>
+                        </tr>
+                        <!-- Science — Silver -->
+                        <tr
+                            class="bg-gradient-to-r from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 transition transform hover:-translate-y-0.5 shadow-sm">
+                            <td class="px-4 py-2">2</td>
+                            <td class="px-4 py-2">Tahmid Hasan</td>
+                            <td class="px-4 py-2">Manarat Dhaka International School and College</td>
+                            <td class="px-4 py-2">Science</td>
+                            <td class="px-4 py-2">Silver</td>
+                        </tr>
+
+                        <!-- Mathematics — Bronze -->
+                        <tr
+                            class="bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition transform hover:-translate-y-0.5 shadow-sm">
+                            <td class="px-4 py-2">3</td>
+                            <td class="px-4 py-2">Labiba Binte Fazlay Rabbee</td>
+                            <td class="px-4 py-2">Mastermind English medium school</td>
+                            <td class="px-4 py-2">Mathematics</td>
+                            <td class="px-4 py-2">Bronze</td>
+                        </tr>
+                        <tr
+                            class="bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition transform hover:-translate-y-0.5 shadow-sm">
+                            <td class="px-4 py-2">4</td>
+                            <td class="px-4 py-2">Ehan Abrad Rahman</td>
+                            <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+                            <td class="px-4 py-2">Mathematics</td>
+                            <td class="px-4 py-2">Bronze</td>
+                        </tr>
+                        <tr
+                            class="bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition transform hover:-translate-y-0.5 shadow-sm">
+                            <td class="px-4 py-2">5</td>
+                            <td class="px-4 py-2">Md. Nabeeh Hossain</td>
+                            <td class="px-4 py-2">St.Joseph Higher Secondary School</td>
+                            <td class="px-4 py-2">Mathematics</td>
+                            <td class="px-4 py-2">Bronze</td>
+                        </tr>
+                        <tr
+                            class="bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition transform hover:-translate-y-0.5 shadow-sm">
+                            <td class="px-4 py-2">6</td>
+                            <td class="px-4 py-2">Wafia Hasan Othoi</td>
+                            <td class="px-4 py-2">SFX Greenherald International School</td>
+                            <td class="px-4 py-2">Mathematics</td>
+                            <td class="px-4 py-2">Bronze</td>
+                        </tr>
+                        <tr
+                            class="bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition transform hover:-translate-y-0.5 shadow-sm">
+                            <td class="px-4 py-2">7</td>
+                            <td class="px-4 py-2">Rafsan Shafiq Talukder</td>
+                            <td class="px-4 py-2">Bonwary Lal Government High School, Sirajganj</td>
+                            <td class="px-4 py-2">Mathematics</td>
+                            <td class="px-4 py-2">Bronze</td>
+                        </tr>
+                        <!-- Science — Bronze -->
+                        <tr
+                            class="bg-gradient-to-r from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 transition transform hover:-translate-y-0.5 shadow-sm">
+                            <td class="px-4 py-2">8</td>
+                            <td class="px-4 py-2">Avigyan Roy Golpo</td>
+                            <td class="px-4 py-2">S.F.X. Greenherald International School</td>
+                            <td class="px-4 py-2">Science</td>
+                            <td class="px-4 py-2">Bronze</td>
+                        </tr>
+                        <tr
+                            class="bg-gradient-to-r from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 transition transform hover:-translate-y-0.5 shadow-sm">
+                            <td class="px-4 py-2">9</td>
+                            <td class="px-4 py-2">Aaqib Fattah Mustofi</td>
+                            <td class="px-4 py-2">St. Joseph International School</td>
+                            <td class="px-4 py-2">Science</td>
+                            <td class="px-4 py-2">Bronze</td>
+                        </tr>
+                        <tr
+                            class="bg-gradient-to-r from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 transition transform hover:-translate-y-0.5 shadow-sm">
+                            <td class="px-4 py-2">10</td>
+                            <td class="px-4 py-2">Shahabi Ibn Kabbo</td>
+                            <td class="px-4 py-2">Saint Joseph Higher Secondary School</td>
+                            <td class="px-4 py-2">Science</td>
+                            <td class="px-4 py-2">Bronze</td>
+                        </tr>
+                        <tr
+                            class="bg-gradient-to-r from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 transition transform hover:-translate-y-0.5 shadow-sm">
+                            <td class="px-4 py-2">11</td>
+                            <td class="px-4 py-2">Syed Ayaan Isa</td>
+                            <td class="px-4 py-2">Lighthouse International School</td>
+                            <td class="px-4 py-2">Science</td>
+                            <td class="px-4 py-2">Bronze</td>
+                        </tr>
+                        <tr
+                            class="bg-gradient-to-r from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 transition transform hover:-translate-y-0.5 shadow-sm">
+                            <td class="px-4 py-2">12</td>
+                            <td class="px-4 py-2">Md. Miftahul Islam</td>
+                            <td class="px-4 py-2">Mymensingh International School</td>
+                            <td class="px-4 py-2">Science</td>
+                            <td class="px-4 py-2">Bronze</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Fireworks Canvas (layered, behind content) -->
+            <canvas id="fireworks-canvas"
+                class="pointer-events-none absolute inset-0 w-full h-full z-0 mix-blend-screen"
+                aria-hidden="true"></canvas>
+
+        </div>
+
+        <script>
+            (function () {
+                const canvas = document.getElementById('fireworks-canvas');
+                if (!canvas) return;
+                const ctx = canvas.getContext('2d');
+                let W = 0, H = 0;
+                function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+                resize(); window.addEventListener('resize', resize);
+
+                const colors = ['#ffd700', '#ff6b6b', '#7c3aed', '#60a5fa', '#34d399', '#f472b6', '#fb923c'];
+
+                function createParticles(x, y) {
+                    const parts = [];
+                    const count = 28 + Math.floor(Math.random() * 12);
+                    for (let i = 0; i < count; i++) {
+                        const angle = (Math.PI * 2) * Math.random();
+                        const speed = 2 + Math.random() * 5;
+                        parts.push({
+                            x: x,
+                            y: y,
+                            vx: Math.cos(angle) * speed,
+                            vy: Math.sin(angle) * speed,
+                            life: 60 + Math.floor(Math.random() * 40),
+                            age: 0,
+                            size: 1 + Math.random() * 3,
+                            color: colors[Math.floor(Math.random() * colors.length)]
+                        });
+                    }
+                    return parts;
+                }
+
+                let particles = [];
+                let animating = false;
+
+                function launchBurst(cx, cy) {
+                    particles = particles.concat(createParticles(cx, cy));
+                    if (!animating) { animating = true; requestAnimationFrame(loop); }
+                }
+
+                function loop() {
+                    ctx.clearRect(0, 0, W, H);
+                    for (let i = particles.length - 1; i >= 0; i--) {
+                        const p = particles[i];
+                        // simple physics
+                        p.vy += 0.06; // gravity
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        p.age++;
+                        const t = p.age / p.life;
+                        const alpha = Math.max(1 - t, 0);
+                        ctx.globalAlpha = alpha;
+                        ctx.fillStyle = p.color;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                        ctx.fill();
+                        // trails
+                        ctx.globalAlpha = alpha * 0.4;
+                        ctx.strokeStyle = p.color;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x - p.vx * 2, p.y - p.vy * 2);
+                        ctx.lineTo(p.x, p.y);
+                        ctx.stroke();
+                        if (p.age > p.life || p.y > H + 20) { particles.splice(i, 1); }
+                    }
+                    if (particles.length > 0) { requestAnimationFrame(loop); } else { animating = false; }
+                }
+
+                // Fire several bursts over ~2 seconds when section becomes visible
+                function startFireworks() {
+                    const bursts = 6;
+                    let fired = 0;
+                    const iv = setInterval(() => {
+                        const x = (0.15 + Math.random() * 0.7) * W;
+                        const y = (0.1 + Math.random() * 0.4) * H;
+                        launchBurst(x, y);
+                        fired++;
+                        if (fired >= bursts) clearInterval(iv);
+                    }, 300);
+                }
+
+                // Trigger fireworks every time the section becomes visible (cooldown to avoid rapid retriggers)
+                const target = document.getElementById('international-winners');
+                if (target) {
+                    let lastFire = 0;
+                    const cooldown = 2000; // milliseconds
+                    const obs = new IntersectionObserver((entries) => {
+                        entries.forEach(e => {
+                            if (e.isIntersecting) {
+                                const now = Date.now();
+                                if (now - lastFire > cooldown) {
+                                    lastFire = now;
+                                    // start now and repeat every 5 seconds (avoid duplicates)
+                                    if (!window.__bdmsoFireworksInterval) {
+                                        startFireworks();
+                                        window.__bdmsoFireworksInterval = setInterval(startFireworks, 5000);
+                                    }
+                                }
+                            }
+                        });
+                    }, { threshold: 0.3 });
+                    obs.observe(target);
+                }
+            })();
+        </script>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section id="about"
+        class="max-w-5xl mx-auto py-16 px-6 bg-white/90 rounded-2xl shadow-xl mb-12 relative overflow-hidden flex flex-col items-center">
+        <!-- Decorative Science SVGs -->
+        <div class="absolute left-0 top-0 z-0 opacity-10">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                <circle cx="60" cy="60" r="50" stroke="#38bdf8" stroke-width="6" fill="none" />
+                <ellipse cx="60" cy="60" rx="40" ry="16" stroke="#22d3ee" stroke-width="3" fill="none" />
+                <ellipse cx="60" cy="60" rx="16" ry="40" stroke="#4ade80" stroke-width="3" fill="none" />
+            </svg>
+        </div>
+        <div class="absolute right-0 bottom-0 z-0 opacity-10">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                <rect x="20" y="30" width="80" height="60" rx="12" stroke="#0ea5e9" stroke-width="6" fill="none" />
+                <circle cx="40" cy="50" r="8" fill="#38bdf8" />
+                <circle cx="80" cy="70" r="8" fill="#4ade80" />
+            </svg>
+        </div>
+        <div class="relative z-10 w-full">
+            <h3 class="text-4xl font-bold mb-6 text-center text-blue-800 tracking-tight drop-shadow">About BdMSO</h3>
+            <p class="mb-6 text-lg md:text-lg text-justify text-gray-800 leading-relaxed font-medium max-w-3xl mx-auto">
+                <span class="inline-block align-middle mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-green-500 inline" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <circle cx="12" cy="12" r="2.5" fill="currentColor" />
+                        <ellipse cx="12" cy="12" rx="8" ry="3.5" stroke="currentColor" stroke-width="1.5" fill="none" />
+                        <ellipse cx="12" cy="12" rx="3.5" ry="8" stroke="currentColor" stroke-width="1.5" fill="none"
+                            transform="rotate(60 12 12)" />
+                        <ellipse cx="12" cy="12" rx="3.5" ry="8" stroke="currentColor" stroke-width="1.5" fill="none"
+                            transform="rotate(-60 12 12)" />
+                    </svg>
+                </span>
+                Bangladesh Mathematics and Science Olympiad (BdMSO) for Primary Students is an initiative jointly
+                launched by
+                the Bangladesh Open Source Network (BdOSN) and Society for the Popularization of Science, Bangladesh
+                (SPSB).
+                This Olympiad is designed to introduce primary school students to the world of mathematics and science
+                from an
+                early age, nurturing their natural curiosity and problem-solving skills.
+                BdMSO serves as the official qualifying round to select Bangladesh's primary school students for
+                international
+                representation.
+                The competition will ultimately choose a national team of six students for Mathematics and six for
+                Science.
+                These twelve individuals will then have the opportunity to represent Bangladesh at the 22nd
+                International
+                Mathematics and Science Olympiad (IMSO) in Kedah, Malaysia, this October.
+            </p>
+
+        </div>
+        <div class="w-full flex justify-center mt-8">
+            <a href="BdMSO_Regulations_2025.pdf" target="_blank"
+                class="inline-block bg-gradient-to-r from-blue-700 to-green-400 text-white px-8 py-4 rounded-xl shadow-lg hover:from-blue-800 hover:to-green-500 transition font-bold text-lg">
+                View Regulations
+            </a>
+        </div>
+    </section>
+
+    <!-- National Program Schedule Section -->
+    <section id="program-schedule"
+        class="max-w-5xl mx-auto py-16 px-6 bg-white/90 rounded-2xl shadow-xl mb-12 flex flex-col items-center">
+        <h3 class="text-4xl font-bold mb-4 text-center text-blue-800 tracking-tight drop-shadow">National Program
+            Schedule
+        </h3>
+        <div class="mb-8 text-center">
+            <span
+                class="inline-block bg-blue-100 text-blue-800 font-semibold rounded-full px-6 py-2 text-lg shadow-sm mr-2">22
+                August 2025</span>
+            <span
+                class="inline-block bg-green-100 text-green-800 font-semibold rounded-full px-6 py-2 text-lg shadow-sm">Venue:
+                St. Joseph Higher Secondary School</span>
+        </div>
+        <div class="w-full flex justify-center">
+            <img src="schedule.png" alt="National Program Schedule"
+                class="rounded-xl shadow-lg max-w-md w-full h-auto border-2 border-blue-200" loading="lazy">
+        </div>
+    </section>
+
+
+
+    <!-- Registration -->
+    <section id="registration"
+        class="max-w-5xl mx-auto py-16 px-6 bg-white/90 rounded-2xl shadow-xl mb-12 relative overflow-hidden flex flex-col items-center">
+        <!-- Decorative SVGs -->
+        <div class="absolute left-0 top-0 z-0 opacity-10">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                <rect x="15" y="25" width="70" height="50" rx="10" stroke="#0ea5e9" stroke-width="5" fill="none" />
+                <circle cx="35" cy="45" r="7" fill="#38bdf8" />
+                <circle cx="65" cy="65" r="7" fill="#4ade80" />
+            </svg>
+        </div>
+        <div class="absolute right-0 bottom-0 z-0 opacity-10">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="40" stroke="#38bdf8" stroke-width="5" fill="none" />
+                <ellipse cx="50" cy="50" rx="32" ry="12" stroke="#22d3ee" stroke-width="2" fill="none" />
+            </svg>
+        </div>
+        <div class="relative z-10 w-full">
+            <h3 class="text-4xl font-bold text-center mb-8 text-blue-800 tracking-tight drop-shadow">Participation
+                Criteria
+            </h3>
+            <div>
+                <p class="mb-4 text-lg md:text-xl text-center text-gray-800 font-medium">BdMSO is open to
+                    primary/elementary
+                    school students across Bangladesh who are under the age of 13.</p>
+                <ul class="list-disc list-inside text-lg text-gray-700 text-left pl-6">
+                    <li>The participants of the Olympiad must be primary school students as of July 1st, 2025.</li>
+                    <li>Birth Date should be on or after October 6, 2012</li>
+                </ul>
+                <div class="w-full flex justify-center mt-8">
+                    <a href="BdMSO_Sample_Question_2025.pdf" target="_blank"
+                        class="inline-block bg-gradient-to-r from-blue-700 to-green-400 text-white px-8 py-4 rounded-xl shadow-lg hover:from-blue-800 hover:to-green-500 transition font-bold text-lg">
+                        View Sample Questions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Animated Android Robot Climbing Rope -->
+    <div id="robot-float"
+        class="fixed bottom-8 right-8 z-50 w-20 h-32 select-none cursor-pointer pointer-events-auto flex flex-col items-center justify-end">
+        <!-- Rope -->
+        <svg width="8" height="120" viewBox="0 0 8 120" class="absolute left-1/2 -translate-x-1/2 top-0 z-0"
+            style="filter: drop-shadow(0 0 2px #aaa);">
+            <rect x="3" y="0" width="2" height="120" rx="1" fill="#bcbcbc" />
+            <rect x="3" y="0" width="2" height="120" rx="1" fill="url(#rope-stripes)" opacity="0.3" />
+            <defs>
+                <linearGradient id="rope-stripes" x1="0" y1="0" x2="0" y2="120" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#e2e8f0" />
+                    <stop offset="1" stop-color="#bcbcbc" />
+                </linearGradient>
+            </defs>
+        </svg>
+        <!-- Android Robot -->
+        <svg id="robot-svg" width="80" height="100" viewBox="0 0 80 100" fill="none" class="relative z-10">
+            <!-- Head -->
+            <ellipse cx="40" cy="28" rx="18" ry="16" fill="#3ddc84" stroke="#249e5c" stroke-width="2" />
+            <!-- Antennae -->
+            <rect x="25" y="10" width="3" height="14" rx="1.5" fill="#249e5c" transform="rotate(-15 25 10)" />
+            <rect x="52" y="10" width="3" height="14" rx="1.5" fill="#249e5c" transform="rotate(15 52 10)" />
+            <!-- Eyes -->
+            <circle cx="33" cy="30" r="2.2" fill="#fff" />
+            <circle cx="47" cy="30" r="2.2" fill="#fff" />
+            <!-- Body -->
+            <rect x="24" y="40" width="32" height="28" rx="10" fill="#3ddc84" stroke="#249e5c" stroke-width="2" />
+            <!-- Arms (gripping rope) -->
+            <rect x="14" y="48" width="10" height="8" rx="4" fill="#3ddc84" stroke="#249e5c" stroke-width="2"
+                transform="rotate(-25 14 48)" />
+            <rect x="56" y="48" width="10" height="8" rx="4" fill="#3ddc84" stroke="#249e5c" stroke-width="2"
+                transform="rotate(25 66 52)" />
+            <!-- Hands (on rope) -->
+            <ellipse cx="19" cy="54" rx="4" ry="3" fill="#249e5c" />
+            <ellipse cx="61" cy="54" rx="4" ry="3" fill="#249e5c" />
+            <!-- Legs (bent, climbing) -->
+            <rect x="30" y="68" width="7" height="18" rx="3.5" fill="#3ddc84" stroke="#249e5c" stroke-width="2"
+                transform="rotate(-15 30 68)" />
+            <rect x="43" y="68" width="7" height="18" rx="3.5" fill="#3ddc84" stroke="#249e5c" stroke-width="2"
+                transform="rotate(15 50 77)" />
+            <!-- Feet -->
+            <ellipse cx="33" cy="86" rx="4" ry="2.5" fill="#249e5c" />
+            <ellipse cx="47" cy="86" rx="4" ry="2.5" fill="#249e5c" />
+        </svg>
+    </div>
+    <script>
+        // Animate robot up/down and sway on scroll
+        window.addEventListener('scroll', function () {
+            const robot = document.getElementById('robot-float');
+            const scrollY = window.scrollY || window.pageYOffset;
+            // Move up and down in a smooth sine wave based on scroll position
+            const offset = Math.sin(scrollY / 100) * 30; // 30px amplitude
+            // Sway left/right for climbing effect
+            const sway = Math.sin(scrollY / 60) * 10; // 10px left/right
+            robot.style.transform = `translateY(${offset}px) translateX(${sway}px)`;
+        });
+        // Scroll to top on robot click
+        document.getElementById('robot-float').addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-800 via-blue-900 to-green-800 text-white py-8 mt-8 shadow-inner">
+        <div class="max-w-5xl mx-auto flex flex-col items-center justify-center px-6 gap-4 text-center">
+            <div class="flex flex-col items-center gap-3">
+
+                <div>
+                    <p class="font-bold text-lg tracking-wide">Bangladesh Mathematics & Science Olympiad</p>
+                    <p class="text-sm text-blue-100">&copy; 2025 BdMSO | Powered by <span
+                            class="font-semibold text-yellow-300">BdOSN</span> & <span
+                            class="font-semibold text-green-300">SPSB</span></p>
+                    <p class="text-sm">
+                        Developed by
+                        <a href="https://boylar.com" target="_blank"
+                            class="text-yellow-300 font-semibold hover:underline">Mosaraf
+                            Hossain Tipu</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
